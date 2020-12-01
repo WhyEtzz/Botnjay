@@ -644,7 +644,7 @@ if (text.includes("!alay")){
 }
 
 
-/*if (text.includes("!nulis"))
+if (text.includes("!nulis"))
    {
       const
       {
