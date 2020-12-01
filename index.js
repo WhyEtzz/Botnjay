@@ -644,14 +644,14 @@ if (text.includes("!alay")){
 }
 
 
-/*if (text.includes("#nulis"))
+/*if (text.includes("!nulis"))
    {
       const
       {
          spawn
       } = require("child_process");
       console.log("writing...")
-      const teks = text.replace(/#nulis/, "")
+      const teks = text.replace(/!nulis/, "")
       const split = teks.replace(/(\S+\s*){1,10}/g, "$&\n")
       const fixedHeight = split.split("\n").slice(0, 25).join("\\n")
       console.log(split)
