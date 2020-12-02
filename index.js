@@ -696,7 +696,7 @@ Const
                     })
                 } else (
                     client.reply(from, '[❗] Kirim video dengan caption *!sgif* max 10 sec!', id)
-                )
+                })
             }
            
 
