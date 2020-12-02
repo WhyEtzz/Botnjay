@@ -679,8 +679,7 @@ if (text.includes("!nulis"))
          })
    }
 
-case '!stickergif':
-        case '!stikergif':
+
         case '!sgif':
             if (isMedia) {
                 if (mimetype === 'video/mp4' && message.duration < 10 || mimetype === 'image/gif' && message.duration < 10) {
