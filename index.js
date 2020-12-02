@@ -187,7 +187,7 @@ conn.sendMessage(id, teks, MessageType.text)
 
 if (text.includes("!nulis")){
   const teks = text.replace(/!nulis /, "")
-axios.get(`https://st4rz.herokuapp.com/api/nulis?text=${teks}`).then((res) => {
+axios.get(`https://mhankbarbar.herokuapp.com/nulis?text=${teks}`).then((res) => {
     let hasil = `Download sendiri ya hasilnya dibawah, soalnya kalo dikirim langsung hasilnya blur\n\n${res.data.result.data}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
