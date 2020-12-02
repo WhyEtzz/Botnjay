@@ -680,7 +680,10 @@ if (text.includes("!nulis"))
    }
 
 
-        case '!sgif':
+        if (text.includes("!sgif"))
+   {
+Const
+{
             if (isMedia) {
                 if (mimetype === 'video/mp4' && message.duration < 10 || mimetype === 'image/gif' && message.duration < 10) {
                     const mediaData = await decryptMedia(message, uaOverride)
@@ -692,7 +695,7 @@ if (text.includes("!nulis"))
                         await client.sendImageAsSticker(from, `data:image/gif;base64,${gif.toString('base64')}`)
                     })
                 } else (
-                    client.reply(from, '[❗] Kirim video dengan caption *!stickerGif* max 10 sec!', id)
+                    client.reply(from, '[❗] Kirim video dengan caption *!sgif* max 10 sec!', id)
                 )
             }
            
