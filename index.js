@@ -583,7 +583,7 @@ if (text.includes("!pict kucing"))
     axios.get(url)
       .then((result) => {
         var z = JSON.parse(JSON.stringify(result.data));
-        var cowok =  z[Math.floor(Math.random() * z.length)];
+        var kucing =  z[Math.floor(Math.random() * z.length)];
         imageToBase64(kucing) 
         .then(
             (response) => {
@@ -657,6 +657,8 @@ const buffer = fs.readFileSync(filepath)
 	conn.sendMessage(id , buffer , MessageType.audio);
 
 };
+
+}
 if (text.includes('!loli')){
   var teks = text.replace(/!loli /, '')
     axios.get('https://st4rz.herokuapp.com/api/randomloli')
