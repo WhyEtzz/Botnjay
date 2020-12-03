@@ -723,7 +723,7 @@ if (text.includes("!nulis"))
 
 
         
-           
+           }
            
 
 
