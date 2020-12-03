@@ -606,7 +606,7 @@ if (text.includes("!animepict"))
   var path = require('path');
   var text1 = teks.slice(6);
   text1 = suara;
-  var suara = text.replace(/#ttsid/g, text1);
+  var suara = text.replace(/!ttsid/g, text1);
   var filepath = 'mp3/bacot.wav';
   
   
@@ -677,7 +677,7 @@ if (text.includes("!nulis"))
             conn.sendMessage(id, buffer, MessageType.image)
             console.log("done")
          })
-   }
+   };
 
 
         
