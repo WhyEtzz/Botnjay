@@ -656,6 +656,18 @@ const buffer = fs.readFileSync(filepath)
 	conn.sendMessage(id , buffer , MessageType.audio);
 
 };
+if (text.includes('!loli')){
+  var teks = text.replace(/!loli /, '')
+    axios.get('https://st4rz.herokuapp.com/api/randomloli')
+    .then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, 'Proses tunggu aja sabar ^_^', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+    });
 }
 if (text.includes("!lirik")){
 	const teks = text.split("!lirik")[1]
