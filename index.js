@@ -376,7 +376,7 @@ var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, info.info(id, BotName, corohelp, tampilTanggal, tampilWaktu, instagram, telegram, youtube, kapanbotaktif) ,MessageType.text);
 }
 else if (text == '!pict'){
-conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok\n\nMisal: !pict cowok' ,MessageType.text);
+conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict cowok' ,MessageType.text);
 }
    if (messageType == 'imageMessage')
    {
@@ -572,6 +572,35 @@ const get = require('got')
     
     });
     }
+
+if (text.includes("!pict kucing"))
+   {
+    var items = ["kucing lucu", "kucing", "cute cat", "cat", "cutest cat", "cosplay cat", "kucing manis"];
+    var kucing = items[Math.floor(Math.random() * items.length)];
+    var url = "https://api.fdci.se/rep.php?gambar=" + kucing;
+    
+    axios.get(url)
+      .then((result) => {
+        var z = JSON.parse(JSON.stringify(result.data));
+        var cowok =  z[Math.floor(Math.random() * z.length)];
+        imageToBase64(kucing) 
+        .then(
+            (response) => {
+  var buf = Buffer.from(response, 'base64'); 
+              conn.sendMessage(
+            id,
+              buf,MessageType.image)
+       
+            }
+        )
+        .catch(
+            (error) => {
+                console.log(error);
+            }
+        )
+    
+    });
+}
 
 if (text.includes("!animepict"))
    {
