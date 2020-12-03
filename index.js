@@ -694,9 +694,7 @@ Const
                         const gif = await fs.readFileSync('./media/output.gif', { encoding: "base64" })
                         await client.sendImageAsSticker(from, `data:image/gif;base64,${gif.toString('base64')}`)
                     })
-                } else (
-                    client.reply(from, '[❗] Kirim video dengan caption *!sgif* max 10 sec!', id)
-                })
+      
             }
            
 
