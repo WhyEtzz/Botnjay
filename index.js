@@ -631,7 +631,7 @@ if (text.includes("!animepict"))
     
     });
     }
- else if (text.includes("!ttsid")) {
+  if (text.includes("!ttsid")) {
   var teks = text.split("!ttsid ")[1];
   var path = require('path');
   var text1 = teks.slice(6);
