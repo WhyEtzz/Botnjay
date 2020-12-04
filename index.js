@@ -726,7 +726,7 @@ if (text.includes("!nulis"))
 
         
            
-           }
+           
 
 
 
