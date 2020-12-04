@@ -243,7 +243,7 @@ conn.sendMessage(id, titoe, MessageType.text);
 if (text.includes("!wikia")){
 const teks = text.replace(/!wikia /, "")
 axios.get(`https://arugaz.herokuapp.com/api/wiki?q=${teks}`).then((res) => {
-	conn.sendMessage(id, 'Proses cuy tunggu aja sabar ^_^', MessageType.text)
+	conn.sendMessage(id, 'Masih Proses Sayang ^_^', MessageType.text)
     let hasil = `*Pertanyaan: ${teks}*\n\nJawaban: ${res.data.result}`;
     conn.sendMessage(id, hasil ,MessageType.text);
 })
@@ -666,7 +666,7 @@ if (text.includes('!loli')){
       imageToBase64(res.data.result)
         .then(
           (ress) => {
-            conn.sendMessage(id, 'Proses tunggu aja sabar ^_^', MessageType.text)
+            conn.sendMessage(id, 'Masih Proses Sayang ^_^', MessageType.text)
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, buf, MessageType.image)
         })
