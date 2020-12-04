@@ -724,7 +724,9 @@ if (text.includes("!nulis"))
    };
 
 
-        })
+        }
+
+})
            
            
 
