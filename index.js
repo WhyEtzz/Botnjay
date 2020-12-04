@@ -167,6 +167,11 @@ else if (text == 'TEST')
 {
   conn.sendMessage(id, tambahan.test, MessageType.text);
 }
+else if (text == 'makasih')
+{
+conn.sendMessage(id, tambahan.makasih ,MessageType.text);
+}
+
 // Fitur
 if(text.includes("!cek")){
 var num = text.replace(/!cek/ , "")
