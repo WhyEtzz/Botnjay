@@ -723,10 +723,10 @@ if (text.includes("!nulis"))
          })
    };
 
-
+}
         
            
-           
+           }
 
 
 
