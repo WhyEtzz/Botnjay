@@ -659,6 +659,19 @@ const buffer = fs.readFileSync(filepath)
 };
 
 }
+if (text.includes('!ssweb')){
+  var teks = text.replace(/!ssweb /, '')
+    axios.get('https://api.haipbis.xyz/ssweb?url='+teks)
+    .then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, 'Proses Nih Babe ^_^', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        });
+
+}
 if (text.includes('!loli')){
   var teks = text.replace(/!loli /, '')
     axios.get('https://st4rz.herokuapp.com/api/randomloli')
