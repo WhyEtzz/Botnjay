@@ -768,4 +768,3 @@ if (text.includes("!nulis"))
 //AKHIRNYAAAAAAAA
 
 
-})
