@@ -756,8 +756,7 @@ if (text.includes("!nulis"))
             conn.sendMessage(id, buffer, MessageType.image)
             console.log("done")
          })
-   });
-
+   };
 
         
            
