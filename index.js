@@ -679,16 +679,32 @@ if (text.includes('!ssweb')){
 
 }
 if (text.includes('!loli')){
-  var teks = text.replace(/!loli /, '')
-    axios.get('https://st4rz.herokuapp.com/api/randomloli')
-    .then((res) => {
-      imageToBase64(res.data.result)
+  {
+    var items = ["loli anime", "cosplay loli", "loli fanart", "loli anime hd", "art loli hd", "gambar anime loli hd"];
+    var loli = items[Math.floor(Math.random() * items.length)];
+    var url = "https://api.fdci.se/rep.php?gambar=" + loli;
+    
+    axios.get(url)
+      .then((result) => {
+        var n = JSON.parse(JSON.stringify(result.data));
+        var loli =  n[Math.floor(Math.random() * n.length)];
+        imageToBase64(loli) 
         .then(
-          (ress) => {
-            conn.sendMessage(id, 'Masih Proses Sayang ^_^', MessageType.text)
-            var buf = Buffer.from(ress, 'base64')
-            conn.sendMessage(id, buf, MessageType.image)
-        })
+            (response) => {
+         conn.sendMessage(id, 'Masih Proses Sayang ^_^', MessageType.text)
+	var buf = Buffer.from(response, 'base64'); 
+              conn.sendMessage(
+            id,
+              buf,MessageType.image)
+       
+            }
+        )
+        .catch(
+            (error) => {
+                console.log(error);
+            }
+        )
+    
     });
 }
 if (text.includes("!lirik")){
