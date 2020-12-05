@@ -675,7 +675,7 @@ if (text.includes('!ssweb')){
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, buf, MessageType.image)
         })
-};
+});
 
 }
 if (text.includes('!loli')){
