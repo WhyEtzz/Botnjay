@@ -757,7 +757,7 @@ if (text.includes("!nulis"))
             console.log("done")
          });
 
-
+}
         
            
            
@@ -767,4 +767,4 @@ if (text.includes("!nulis"))
 
 //AKHIRNYAAAAAAAA
 
-}
+
