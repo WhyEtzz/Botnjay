@@ -754,10 +754,10 @@ if (text.includes("!nulis"))
          {
             const buffer = fs.readFileSync("assets/result.jpg") // can send mp3, mp4, & ogg -- but for mp3 files the mimetype must be set to ogg
             conn.sendMessage(id, buffer, MessageType.image)
-            console.log("done");
+            console.log("done")
          })
 
-}
+};
         
            
            
