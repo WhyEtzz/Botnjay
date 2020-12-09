@@ -187,8 +187,7 @@ conn.sendMessage(id ,`nomor hp ${gg} ${exists ? " tersedia " : " tidak tersedia"
 
 if (text.includes("!say")){
   const teks = text.replace(/!say /, "")
-conn.sendMessage(id, teks, MessageType.text)
-});
+conn.sendMessage(id, teks, MessageType.text);
 
 }
 
