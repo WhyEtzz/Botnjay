@@ -1,5 +1,5 @@
 ## BOT WHATSAPP
-BOT WHATSAPP YANG BISA DIGUNAKAN DI TERMUX
+APASIH KONTOL
 
 
 
@@ -43,7 +43,7 @@ BOT WHATSAPP YANG BISA DIGUNAKAN DI TERMUX
 |       ✅       | ARTI NAMA                         |
 |       ✅       | SHOLAT                            |
 |       ✅       | QURAN                             |
-|       ✅       | STICKERGIF                        |
+|       ✅       | SSWEB                        |
 
 ket : ✅ : aktif
 
