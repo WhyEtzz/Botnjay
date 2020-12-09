@@ -391,11 +391,12 @@ conn.sendMessage(id, info.info(id, BotName, corohelp, tampilTanggal, tampilWaktu
 else if (text == '!pict'){
 conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict cowok' ,MessageType.text);
 }
+
    if (messageType == 'imageMessage')
    {
       let caption = imageMessage.caption.toLocaleLowerCase()
       const buffer = await conn.downloadMediaMessage(m) // to decrypt & use as a buffer
-      if (caption == '!sticker')
+      if (caption == '!sticker,!stiker,! sticker,! stiker,! Stiker ! Sticker')
       {
          const stiker = await conn.downloadAndSaveMediaMessage(m) // to decrypt & save to file
 
