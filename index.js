@@ -746,6 +746,11 @@ if (text.includes('!loli')){
     
     });
 }
+Ig (text.includes("makasih")
+conn.sendmessage(id, 'Sama Sama Sayang❤',messagetype.text)
+});
+
+}
 if (text.includes("!lirik")){
 	const teks = text.split("!lirik")[1]
 	axios.get(`http://scrap.terhambar.com/lirik?word=${teks}`).then ((res) => {
