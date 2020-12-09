@@ -586,7 +586,7 @@ const get = require('got')
     
     });
 
-{
+}
 
    if (text.includes("!image"))
    {
@@ -714,8 +714,7 @@ if (text.includes('!ssweb')){
             conn.sendMessage(id, 'Proses Nih Babe ^_^', MessageType.text)
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, buf, MessageType.image)
-        })
-});
+        });
 
 }
 if (text.includes('!loli')){
