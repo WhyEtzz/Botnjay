@@ -762,7 +762,7 @@ if (text.includes("!alay")){
            
       });
 
-End.
+}} 
 
 
 
