@@ -717,7 +717,7 @@ if (text.includes('!ssweb')){
         });
 
 }
-if (text.includes('!loli')){
+if (text.includes('!loli'))
   {
     var items = ["loli anime", "cosplay loli", "loli fanart", "loli anime hd", "art loli hd", "gambar anime loli hd"];
     var loli = items[Math.floor(Math.random() * items.length)];
