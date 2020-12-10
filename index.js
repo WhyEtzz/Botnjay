@@ -593,7 +593,7 @@ const get = require('got')
     const ima = text.split("!image")[1]
     var items = ["${Ima}"];
     var gambar = items[Math.floor(Math.random() * items.length)];
-    var url = "https://api.fdci.se/rep.php?gambar=" + ima;
+    var url = 'https://api.fdci.se/rep.php?gambar= + ${ima}';
     
     axios.get(url)
       .then((result) => {
@@ -762,8 +762,12 @@ if (text.includes("!alay")){
            
       });
 
-}} 
+}}
 
+//UDAHLAH:(
+
+
+)
 
 
    
