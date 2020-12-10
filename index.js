@@ -760,7 +760,7 @@ if (text.includes("!alay")){
 		{ let hasil = `${res.data.text}`
 		conn.sendMessage(id, hasil, MessageType.text)
            
-      }
+      })
 }
 
 
