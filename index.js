@@ -591,15 +591,15 @@ const get = require('got')
    if (text.includes("!image"))
    {
     const ima = text.split("!image")[1]
-    var items = ["${ima}"];
+    var items = ["${Ima}"];
     var gambar = items[Math.floor(Math.random() * items.length)];
-    var url = 'https://api.fdci.se/rep.php?gambar= + ${ima}';
+    var url = "https://api.fdci.se/rep.php?gambar=" + ima;
     
     axios.get(url)
       .then((result) => {
         var z = JSON.parse(JSON.stringify(result.data));
         var teks =  z[Math.floor(Math.random() * z.length)];
-        imageToBase64(teks) 
+        imageToBase64(ima) 
         .then(
             (response) => {
   var buf = Buffer.from(response, 'base64'); 
