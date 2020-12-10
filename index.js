@@ -762,6 +762,8 @@ if (text.includes("!alay")){
 	});
 
 
-        
+        //UDAHCOKKKK
+
+})
            
       
