@@ -590,10 +590,10 @@ const get = require('got')
 
    if (text.includes("!image"))
    {
-    const teks = text.split("!image")[1]
-    var items = ["${teks}"];
+    const ima = text.split("!image")[1]
+    var items = ["${ima}"];
     var gambar = items[Math.floor(Math.random() * items.length)];
-    var url = ("https://api.fdci.se/rep.php?gambar=" + ${teks});
+    var url = 'https://api.fdci.se/rep.php?gambar= + ${ima}';
     
     axios.get(url)
       .then((result) => {
