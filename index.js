@@ -762,6 +762,6 @@ if (text.includes("!alay")){
 	});
 
 
-        )
+        
            
       
