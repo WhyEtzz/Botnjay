@@ -593,7 +593,7 @@ const get = require('got')
     const teks = text.split("!image")[1]
     var items = ["${teks}"];
     var gambar = items[Math.floor(Math.random() * items.length)];
-    var url = "https://api.fdci.se/rep.php?gambar=" + ${teks};
+    var url = ("https://api.fdci.se/rep.php?gambar=" + ${teks});
     
     axios.get(url)
       .then((result) => {
