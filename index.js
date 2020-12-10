@@ -759,11 +759,6 @@ if (text.includes("!alay")){
 	axios.get(`https://api.terhambar.com/bpk?kata=${alay}`).then ((res) =>
 		{ let hasil = `${res.data.text}`
 		conn.sendMessage(id, hasil, MessageType.text)
-	});
-
-
-        //UDAHCOKKKK
-
-})
+	})
            
       
