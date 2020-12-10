@@ -5,7 +5,7 @@ const imageToBase64 = require('image-to-base64');
 const get = require('got')
 const fs = require("fs");
 const dl = require("./lib/downloadImage.js");
-const fetch = require('node-fetch');
+const fetch = require('node-fetch') ;
 const urlencode = require("urlencode");
 const axios = require("axios");
 const menu = require("./lib/menu.js");
@@ -761,7 +761,7 @@ if (text.includes("!alay")){
 		conn.sendMessage(id, hasil, MessageType.text)
            
       })
-}
+}{)
 
 
    
