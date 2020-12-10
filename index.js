@@ -715,7 +715,7 @@ if (text.includes('!ssweb')){
             conn.sendMessage(id, buf, MessageType.image)
         });
 
-}
+{
 if (text.includes('!loli'))
   {
     var items = ["loli anime", "cosplay loli", "loli fanart", "loli anime hd", "art loli hd", "gambar anime loli hd"];
