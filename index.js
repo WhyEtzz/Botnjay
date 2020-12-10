@@ -746,7 +746,7 @@ if (text.includes('!loli'))
     
     });
 }
-Ig (text.includes("makasih")
+If (text.includes("makasih")
 conn.sendmessage(id, 'Sama Sama Sayang❤',messagetype.text)
 });
 
