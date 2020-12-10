@@ -744,9 +744,6 @@ if (text.includes('!loli'))
         )
     
     });
-}
-If (text.includes("makasih")){
-conn.sendmessage(id, 'Sama Sama Sayang❤',messagetype.text);
 
 }
 if (text.includes("!lirik")){
