@@ -767,7 +767,7 @@ if (text.includes("!alay")){
 //UDAHLAH:(
 
 
-}
+})
 
 
    
