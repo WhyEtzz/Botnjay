@@ -768,8 +768,7 @@ if (text.includes("!alay")){
 
 
 };
-
-
+}
 })
 
 
