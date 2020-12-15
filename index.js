@@ -590,7 +590,7 @@ const get = require('got')
 
    if (text.includes("!image"))
    {
-    const items = text.split("!image")[1]
+    var items = text.split("!image")[1]
   
     var gambar = items[Math.floor(Math.random() * items.length)];
     var url = 'https://api.fdci.se/rep.php?gambar= + gambar';
@@ -714,7 +714,7 @@ if (text.includes('!ssweb')){
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, buf, MessageType.image)
         })
-})
+});
 
 }
 if (text.includes('!loli'))
