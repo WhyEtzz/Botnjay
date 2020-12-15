@@ -585,13 +585,12 @@ const get = require('got')
         )
     
     });
-
 }
 
    if (text.includes("!image"))
    {
-    var items = text.split("!image")[1]
-  
+    var teks = text.split("!image")[1]
+  var items = teks
     var gambar = items[Math.floor(Math.random() * items.length)];
     var url = 'https://api.fdci.se/rep.php?gambar= + gambar';
     
@@ -691,7 +690,7 @@ if (text.includes("!animepict"))
 
 gtts.save(filepath, suara, function() {
   console.log(`${filepath} MP3 SAVED!`)
-});
+
 await new Promise(resolve => setTimeout(resolve, 500));
 
 	if(suara.length > 200){ // check longness of text, because otherways google translate will give me a empty file
@@ -717,6 +716,7 @@ if (text.includes('!ssweb')){
 });
 
 }
+
 if (text.includes('!loli'))
   {
     var items = ["loli anime", "cosplay loli", "loli fanart", "loli anime hd", "art loli hd", "gambar anime loli hd"];
