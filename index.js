@@ -419,8 +419,8 @@ conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict co
                let pjr = tod[Math.floor(Math.random() * tod.length)];
                let pantun = pjr.replace(/pjrx-line/g, "\n");
                conn.sendMessage(id, pantun, MessageType.text)
-            });
-      }
+            })
+      };
 
    
       if (text.includes("!covid"))
