@@ -396,7 +396,7 @@ conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict co
    {
       let caption = imageMessage.caption.toLocaleLowerCase()
       const buffer = await conn.downloadMediaMessage(m) // to decrypt & use as a buffer
-      if (caption == '!sticker,!stiker,! sticker,! stiker,! Stiker ! Sticker')
+      if (caption.includes == '!sti')
       {
          const stiker = await conn.downloadAndSaveMediaMessage(m) // to decrypt & save to file
 
@@ -691,7 +691,6 @@ if (text.includes('!ssweb')){
 });
 
 }
-
 if (text.includes('!loli'))
   {
     var items = ["loli anime", "cosplay loli", "loli fanart", "loli anime hd", "art loli hd", "gambar anime loli hd"];
