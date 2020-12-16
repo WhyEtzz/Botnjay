@@ -764,14 +764,6 @@ if (text.includes("!alay")){
       });
 }
 
-//Udahh
-
-}
-//kontolsuwe
-
-}
-
 })
-
-
-   
+  }
+})
