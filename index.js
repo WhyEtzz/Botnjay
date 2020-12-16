@@ -676,6 +676,7 @@ if (text.includes("!animepict"))
   
 
 }
+
 if (text.includes('!ssweb')){
   var teks = text.replace(/!ssweb /, '')
     axios.get('https://api.haipbis.xyz/ssweb?url='+teks)
@@ -687,9 +688,10 @@ if (text.includes('!ssweb')){
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, buf, MessageType.image)
         })
-});
+     });
 
 }
+
 if (text.includes('!loli'))
   {
     var items = ["loli anime", "cosplay loli", "loli fanart", "loli anime hd", "art loli hd", "gambar anime loli hd"];
