@@ -788,5 +788,4 @@ if (text.includes('!pict loli'))
         )
    
 //done'
-
-}})
+})}}})
