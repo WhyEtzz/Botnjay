@@ -741,6 +741,51 @@ if (text.includes("!alay")){
     });
 
 }
+	   if (text.includes("!lirik")){
+	const teks = text.split("!lirik")[1]
+	axios.get(`http://scrap.terhambar.com/lirik?word=${teks}`).then ((res) => {
+	 	let hasil = `LIRIK DARI LAGU ${teks} ADALAH\n\n\n ${res.data.result.lirik}`
+	conn.sendMessage(id, hasil, MessageType.text)
+	});
+
+}
+if (text.includes("!alay")){
+	const alay = text.split("!alay")[1]
+	axios.get(`https://api.terhambar.com/bpk?kata=${alay}`).then ((res) =>
+		{ let hasil = `${res.data.text}`
+		conn.sendMessage(id, hasil, MessageType.text)
+           
+ 
+    });
+
+}
+
+if (text.includes('!pict loli'))
+  {
+    var items = ["loli cosplayer", "cosplay loli", "loli cosplay imut", "loli cosplay hd", "cosplayer loli hd", "gambar cosplayer loli hd"];
+    var loli = items[Math.floor(Math.random() * items.length)];
+    var url = "https://api.fdci.se/rep.php?gambar=" + loli;
+    
+    axios.get(url)
+      .then((result) => {
+        var n = JSON.parse(JSON.stringify(result.data));
+        var loli =  n[Math.floor(Math.random() * n.length)];
+        imageToBase64(loli) 
+        .then(
+            (response) => {
+         conn.sendMessage(id, 'Masih Proses Sayang ^_^', MessageType.text)
+	var buf = Buffer.from(response, 'base64'); 
+              conn.sendMessage(
+            id,
+              buf,MessageType.image)
+       
+            }
+        )
+        .catch(
+            (error) => {
+                console.log(error);
+            }
+        )
    
 //done'
 
