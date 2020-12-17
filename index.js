@@ -708,8 +708,8 @@ request({
             var buf = Buffer.from(ress, 'base64')
             conn.sendMessage(id, buf, MessageType.image)
         })
-     });
-
+     })
+	   
     .then((res) => {
       imageToBase64(res.data.result)
         .then(
