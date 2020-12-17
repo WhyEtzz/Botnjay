@@ -770,7 +770,7 @@ if (text.includes("!alay")){
     });
 
 }
-   }})
+   })
 //done'
 
 
