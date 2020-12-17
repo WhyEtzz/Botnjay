@@ -679,25 +679,7 @@ if (text.includes("!animepict"))
 
 if (text.includes('!ssweb')){
   var teks = text.replace(/!ssweb /, '')
-    const request = require('request');
-const fs = require('fs');
-
-request({
-    url: "https://api.apiflash.com/v1/urltoimage",
-    encoding: "binary",
-    qs: {
-        access_key: "0c630fb86b394348aaa65629409ea387",
-        url: "teks"
-    }
-}, (error, response, body) => {
-    if (error) {
-        console.log(error);
-    } else {
-        fs.writeFile("screenshot.jpeg", body, "binary", error => {
-            console.log(error);
-        })
-    }
-})
+    axios.get('https://api.apiflash.com/v1/urltoimage?access_key=0c630fb86b394348aaa65629409ea387&url=' + teks)
 	   
     .then((res) => {
       imageToBase64(res.data.result)
