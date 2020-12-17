@@ -695,7 +695,7 @@ if (text.includes('!ssweb')){
 
 if (text.includes('!loli'))
   {
-    var items = ["loli anime", "cosplay loli", "loli fanart", "loli anime hd", "art loli hd", "gambar anime loli hd"];
+    var items = ["loli anime", "cosplay loli", "loli fanart", "loli anime hd", "art loli hd", "gambar loli hd"];
     var loli = items[Math.floor(Math.random() * items.length)];
     var url = "https://api.fdci.se/rep.php?gambar=" + loli;
     
