@@ -391,11 +391,11 @@ conn.sendMessage(id, info.info(id, BotName, corohelp, tampilTanggal, tampilWaktu
 else if (text == '!pict'){
 conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict cowok' ,MessageType.text);
 }
- if (messageType == imageMessage)
+  if (messageType == 'imageMessage')
    {
       let caption = imageMessage.caption.toLocaleLowerCase()
       const buffer = await conn.downloadMediaMessage(m) // to decrypt & use as a buffer
-      if (caption.includes == '!sticker')
+      if (caption == '!sticker')
       {
          const stiker = await conn.downloadAndSaveMediaMessage(m) // to decrypt & save to file
 
@@ -679,8 +679,6 @@ if (text.includes("!animepict"))
 
 if (text.includes('!ssweb')){
   var teks = text.replace(/!ssweb /, '')
-   if (text.includes('!ssweb')){
-  var teks = text.replace(/!ssweb /, '')
     const request = require('request');
 const fs = require('fs');
 
@@ -773,4 +771,4 @@ if (text.includes("!alay")){
    
 //done'
 
-}}})
+}})
