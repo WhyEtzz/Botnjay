@@ -695,18 +695,9 @@ request({
     } else {
         fs.writeFile("screenshot.jpeg", body, "binary", error => {
             console.log(error);
-        });
+        })
     }
 })
-    .then((res) => {
-      imageToBase64(res.data.result)
-        .then(
-          (ress) => {
-            conn.sendMessage(id, 'Proses Nih Babe ^_^', MessageType.text)
-            var buf = Buffer.from(ress, 'base64')
-            conn.sendMessage(id, buf, MessageType.image)
-        })
-     })
 	   
     .then((res) => {
       imageToBase64(res.data.result)
