@@ -679,7 +679,7 @@ if (text.includes("!animepict"))
 
 if (text.includes('!ssweb')){
   var teks = text.replace(/!ssweb /, '')
-    axios.get('https://api.apiflash.com/v1/urltoimage?access_key=0c630fb86b394348aaa65629409ea387&url=' + teks)
+    axios.get('https://api.apiflash.com/v1/urltoimage?access_key=0c630fb86b394348aaa65629409ea387&url=https%3A%2F%2F' + teks)
 	   
     .then((res) => {
       imageToBase64(res.data.result)
