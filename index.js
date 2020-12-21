@@ -412,7 +412,8 @@ conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict co
    }
    if (messageType === MessageType.text)
    {
-      let is = m.message.conversation.toLocaleLowerCase()
+      let is = m.message.conversation.toLocaleLowerCase();
+}
 
       if (is == '!pantun')
       {
