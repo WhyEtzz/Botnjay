@@ -408,7 +408,7 @@ conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict co
             let stik = fs.readFileSync('temp/' + jam + '.webp')
             conn.sendMessage(id, stik, MessageType.sticker)
          });
-      }
+      
    }
    if (messageType === MessageType.text)
    {
@@ -768,6 +768,21 @@ if (text.includes('!pict loli'))
                 console.log(error);
             }
         )
+       
+      
+        if (text.includes('!waifu')){
+    axios.get('https://arugaz.herokuapp.com/api/waifu')
+	   
+    .then((res) => {
+      imageToBase64(res.data.result)
+        .then(
+          (ress) => {
+            conn.sendMessage(id, 'Proses Nih Babe ^_^', MessageType.text)
+            var buf = Buffer.from(ress, 'base64')
+            conn.sendMessage(id, buf, MessageType.image)
+        })
+     });
+
    
 //done'
-})}}})
+    }})}}}})
