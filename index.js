@@ -13,9 +13,9 @@ const tambahan = require("./lib/tambahan.js")
 const donasi = require("./lib/donasi.js");
 const info = require("./lib/info.js");
 
-module.exports = index = async (Etzz, message) => {
+module.exports = index = async (conn, message) => {
     try {
-const botNumber = await Etzz.getHostNumber() + '@c.us'
+const botNumber = await conn.getHostNumber() + '@c.us'
 /////////////////
 const BotName = '🍦Etzz Bot🍦'; 
 const instagram = 'https://instagram.com/KingPoseidon__'; 
@@ -405,7 +405,7 @@ conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict co
                 const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
                 aruga.sendImageAsSticker(from, imageBase64)
                 .then(() => {
-                    Etzz.reply(from, 'Nih Sayang >///<')
+                    conn.reply(from, 'Nih Sayang >///<')
                     console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
                 });
 
