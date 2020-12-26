@@ -395,8 +395,7 @@ conn.sendMessage(id, info.info(id, BotName, corohelp, tampilTanggal, tampilWaktu
 else if (text == '!pict'){
 conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict cowok' ,MessageType.text);
 }
-  if (messageType == 'imageMessage')
-   {
+ 
       case 'sticker':
         case 'stiker':
             if ((isMedia || isQuotedImage) && args.length === 0) {
@@ -410,11 +409,6 @@ conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict co
                     console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
                 });
 
-      
-   }
-   if (messageType === MessageType.text)
-   {
-      let is = m.message.conversation.toLocaleLowerCase();
 }
 
       if (is == '!pantun')
