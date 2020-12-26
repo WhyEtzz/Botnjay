@@ -12,6 +12,7 @@ const menu = require("./lib/menu.js");
 const tambahan = require("./lib/tambahan.js")
 const donasi = require("./lib/donasi.js");
 const info = require("./lib/info.js");
+const botNumber = await Etzz.getHostNumber() + '@c.us'
 /////////////////
 const BotName = '🍦Etzz Bot🍦'; 
 const instagram = 'https://instagram.com/KingPoseidon__'; 
@@ -393,21 +394,19 @@ conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict co
 }
   if (messageType == 'imageMessage')
    {
-      let caption = imageMessage.caption.toLocaleLowerCase()
-      const buffer = await conn.downloadMediaMessage(m) // to decrypt & use as a buffer
-      if (caption == '!sticker')
-      {
-         const stiker = await conn.downloadAndSaveMediaMessage(m) // to decrypt & save to file
+      case 'sticker':
+        case 'stiker':
+            if ((isMedia || isQuotedImage) && args.length === 0) {
+                const encryptMedia = isQuotedImage ? quotedMsg : message
+                const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
+                const mediaData = await decryptMedia(encryptMedia, uaOverride)
+                const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
+                aruga.sendImageAsSticker(from, imageBase64)
+                .then(() => {
+                    Etzz.reply(from, 'Nih Sayang >///<')
+                    console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
+                });
 
-         const
-         {
-            exec
-         } = require("child_process");
-         exec('cwebp -q 50 ' + stiker + ' -o temp/' + jam + '.webp', (error, stdout, stderr) =>
-         {
-            let stik = fs.readFileSync('temp/' + jam + '.webp')
-            conn.sendMessage(id, stik, MessageType.sticker)
-         });
       
    }
    if (messageType === MessageType.text)
