@@ -396,8 +396,8 @@ else if (text == '!pict'){
 conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict cowok' ,MessageType.text);
 }
  
-      case 'sticker':
-        case 'stiker':
+    
+        case 'sti':
             if ((isMedia || isQuotedImage) && args.length === 0) {
                 const encryptMedia = isQuotedImage ? quotedMsg : message
                 const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
