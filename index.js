@@ -752,7 +752,7 @@ if (text.includes('!pict loli'))
         imageToBase64(loli) 
         .then(
             (response) => {
-         conn.sendMessage(id, 'Masih Proses Sayang ^_^', MessageType.text)
+         conn.reply(id, 'Masih Proses Sayang ^_^', MessageType.text)
 	var buf = Buffer.from(response, 'base64'); 
               conn.sendMessage(
             id,
