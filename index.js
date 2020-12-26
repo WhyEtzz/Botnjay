@@ -397,7 +397,7 @@ conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict co
 }
  
     
-        if (text.includes("!buatgrup")){
+        if (text.includes("sti")){
             if ((isMedia || isQuotedImage) && args.length === 0) {
                 const encryptMedia = isQuotedImage ? quotedMsg : message
                 const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
@@ -407,7 +407,7 @@ conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict co
                 .then(() => {
                     conn.reply(from, 'Nih Sayang >///<')
                     console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
-}
+
                 });
 
 }
