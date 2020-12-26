@@ -12,6 +12,9 @@ const menu = require("./lib/menu.js");
 const tambahan = require("./lib/tambahan.js")
 const donasi = require("./lib/donasi.js");
 const info = require("./lib/info.js");
+
+module.exports = index = async (Etzz, message) => {
+    try {
 const botNumber = await Etzz.getHostNumber() + '@c.us'
 /////////////////
 const BotName = '🍦Etzz Bot🍦'; 
