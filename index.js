@@ -84,6 +84,9 @@ conn.on('message-new', async(m) =>
    let imageMessage = m.message.imageMessage;
    console.log(`[ ${moment().format("HH:mm:ss")} ] => Nomor: [ ${id.split("@s.whatsapp.net")[0]} ] => ${text}`);
 
+module.exports = index = async (conn, message) => {
+    try {
+const botNumber = await conn.getHostNumber() + '@c.us'
 
 // Groups
 
@@ -403,7 +406,7 @@ conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok/kucing\n\nMisal: !pict co
                 const _mimetype = isQuotedImage ? quotedMsg.mimetype : mimetype
                 const mediaData = await decryptMedia(encryptMedia, uaOverride)
                 const imageBase64 = `data:${_mimetype};base64,${mediaData.toString('base64')}`
-                aruga.sendImageAsSticker(from, imageBase64)
+                conn.sendImageAsSticker(from, imageBase64)
                 .then(() => {
                     conn.reply(from, 'Nih Sayang >///<')
                     console.log(`Sticker Processed for ${processTime(t, moment())} Second`)
